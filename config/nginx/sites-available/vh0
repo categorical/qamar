@@ -1,0 +1,11 @@
+server {
+    listen 80;
+    server_name vh0;
+    root /var/www;
+    
+    location ~ \.php$ {
+        fastcgi_pass 127.0.0.1:6000;
+        include /usr/local/etc/nginx/fastcgi_params;
+        fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+    }
+}

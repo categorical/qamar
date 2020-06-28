@@ -1,0 +1,11 @@
+#!/bin/bash
+
+readonly EXECUTABLE='/opt/rsyslog/sbin/rsyslogd.rename'
+readonly PIDDIR='/var/run/rsyslog'
+
+if [ ! -d "$PIDDIR" ];then
+    (umask 066;sudo mkdir "$PIDDIR" && sudo chown _log "$PIDDIR")
+fi
+
+"$EXECUTABLE" "$@"
+

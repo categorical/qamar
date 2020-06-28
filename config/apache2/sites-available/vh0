@@ -1,0 +1,12 @@
+
+
+<VirtualHost *:90>
+    DocumentRoot "/var/www"
+    ServerName vh0
+    <Directory /var/www>
+        Options Indexes FollowSymLinks
+        AllowOverride None
+        Require all granted
+    </Directory>
+</VirtualHost>
+

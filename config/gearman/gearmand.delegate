@@ -1,0 +1,11 @@
+#!/bin/bash
+
+readonly EXECUTABLE='/opt/gearman/sbin/gearmand.rename'
+readonly PIDDIR='/var/run/gearman'
+
+if [ ! -d "$PIDDIR" ];then
+    (umask 022;sudo mkdir "$PIDDIR" && sudo chown _queue "$PIDDIR")
+fi
+
+"$EXECUTABLE" "$@"
+

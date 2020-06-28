@@ -1,0 +1,12 @@
+
+
+syntax: glob
+src
+dist
+.DS_Store
+*.swp
+.git
+
+syntax: regexp
+
+

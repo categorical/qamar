@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>Label</key>
+        <string>postgres</string>
+        <key>ProgramArguments</key>
+        <array>
+            <string>/opt/postgres/bin/postgres</string>
+            <string>--config-file=/usr/local/etc/postgres/postgresql.conf</string>
+        </array>
+        <key>StandardOutPath</key>
+        <string>/var/log/postgres/out.log</string>
+        <key>StandardErrorPath</key>
+        <string>/var/log/postgres/err.log</string>
+        <key>UserName</key>
+        <string>_postgres</string>
+        <key>KeepAlive</key>
+        <false/>
+        <key>RunAtLoad</key>
+        <true/>
+    </dict>
+</plist>

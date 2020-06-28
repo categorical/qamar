@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>Label</key>
+        <string>apache2</string>
+        <key2>ProgramArguments</key>
+        <array>
+            <string>/opt/apache2/bin/httpd</string>
+            <string>-f</string>
+            <string>/usr/local/etc/httpd/httpd.conf</string>
+            <string>-DFOREGROUND</string>
+        </array>
+        <key>KeepAlive</key>
+        <false/>
+        <key>RunAtLoad</key>
+        <true/>
+    </dict>
+</plist>

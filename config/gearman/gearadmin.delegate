@@ -1,0 +1,20 @@
+#!/bin/bash
+
+GEARMANHOST="${GEARMANHOST:-127.0.0.1}"
+GEARMANPORT="${GEARMANPORT:-4730}"
+
+readonly EXECUTABLE='/opt/gearman/bin/gearadmin'
+
+declare -a args
+
+while [ $# -gt 0 ];do
+    case $1 in
+        -h) GEARMANHOST="$2";shift 2||shift;;
+        -p) GEARMANPORT="$2";shift 2||shift;;
+        *) args+=("$1");shift;;
+    esac
+done
+
+
+(set -x;"$EXECUTABLE" -h "$GEARMANHOST" -p "$GEARMANPORT" "${args[@]}")
+
