@@ -1,0 +1,11 @@
+#!/bin/bash
+
+readonly EXECUTABLE='/opt/mysql/bin/mysqld_safe.rename'
+readonly PIDDIR='/var/run/mysql'
+
+if [ ! -d "$PIDDIR" ];then
+    (umask 066;sudo mkdir "$PIDDIR" && sudo chown _mysql "$PIDDIR")
+fi
+
+"$EXECUTABLE" "$@"
+

@@ -1,0 +1,7 @@
+#!/bin/bash
+
+EXECUTABLE='/opt/gimp/bin/gimp'
+
+
+exec "$EXECUTABLE" "$@"
+

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>Label</key>
+        <string>rsyslogd</string>
+        <key>ProgramArguments</key>
+        <array>
+            <string>/opt/rsyslog/sbin/rsyslogd</string>
+            <string>-f</string>
+            <string>/usr/local/etc/rsyslog/rsyslog.conf</string>
+            <string>-i</string>
+            <string>/var/run/rsyslog/rsyslogd.pid</string>
+            <string>-n</string>
+        </array>
+        <key>StandardOutPath</key>
+        <string>/var/log/rsyslog/out.log</string>
+        <key>StandardErrorPath</key>
+        <string>/var/log/rsyslog/err.log</string>
+        <key>KeepAlive</key>
+        <false/>
+        <key>RunAtLoad</key>
+        <true/>
+    </dict>
+</plist>
+
+

@@ -1,0 +1,11 @@
+#!/bin/bash
+
+readonly EXECUTABLE='/opt/supervisor/bin/supervisord.rename'
+readonly PIDDIR='/var/run/supervisor'
+
+if [ ! -d "$PIDDIR" ];then
+    (umask 022;sudo mkdir "$PIDDIR")
+fi
+
+"$EXECUTABLE" "$@"
+

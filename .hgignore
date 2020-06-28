@@ -1,0 +1,11 @@
+
+
+syntax: glob
+src
+dist
+.DS_Store
+*.swp
+
+syntax: regexp
+
+

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>Label</key>
+        <string>redis</string>
+        <key>ProgramArguments</key>
+        <array>
+            <string>/opt/redis/bin/redis-server</string>
+            <string>/usr/local/etc/redis/redis.conf</string>
+        </array>
+        <key>KeepAlive</key>
+        <false/>
+        <key>RunAtLoad</key>
+        <true/>
+    </dict>
+</plist>
+

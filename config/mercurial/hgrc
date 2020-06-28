@@ -1,0 +1,27 @@
+
+# example user config (see 'hg help config' for more info)
+[ui]
+# name and email, e.g.
+# username = Jane Doe <jdoe@example.com>
+
+username = dawei.chen@hotmail.co.uk
+
+
+# uncomment to disable color in command output
+# (see 'hg help color' for details)
+# color = never
+
+# uncomment to disable command output pagination
+# (see 'hg help pager' for details)
+# paginate = never
+
+[extensions]
+# uncomment these lines to enable some popular extensions
+# (see 'hg help extensions' for more info)
+#
+# churn =
+
+[web]
+cacerts=/usr/local/etc/ssl/cacert.pem
+
+
