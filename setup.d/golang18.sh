@@ -41,6 +41,7 @@ _config(){
     linkbin 'go'
     linkbin 'gofmt'
     setenv 'GOPATH' '$HOME/.godev'
+
 }
 
 [ "$1" == '--config' ]||_install;_config
